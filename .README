@@ -1,0 +1,5 @@
+## Projet demo cypress cy.fixture vs require
+
+git clone
+npm install
+npx cypress open pour executer les tests sur le test runner
