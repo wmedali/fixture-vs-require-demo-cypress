@@ -1,7 +1,9 @@
-import { Home } from "../pages/home";
+import { Home } from "../../pages/home";
 describe("authentication tests saucedemo", () => {
   beforeEach(function () {
-    cy.visit("https://www.saucedemo.com/");
+    cy.log(Cypress.config("baseUrl"));
+    cy.pause();
+    cy.visit("/");
     cy.fixture("users").then((toto) => {
       this.users = toto;
     });
@@ -9,6 +11,7 @@ describe("authentication tests saucedemo", () => {
   it("incorrect password", function () {
     const user = this.users[0];
     Home.login(user.username, user.password);
+    cy.screenshot();
     cy.url().should("not.include", "/inventory.html");
   });
 

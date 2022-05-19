@@ -1,3 +1,9 @@
 {
-  "chromeWebSecurity": false
+  "defaultCommandTimeout": 8000,
+  "integrationFolder": "cypress/tests",
+  "screenshotsFolder": "temp",
+  "chromeWebSecurity": false,
+  "env": {
+    "environment": "pre-prod"
+  }
 }

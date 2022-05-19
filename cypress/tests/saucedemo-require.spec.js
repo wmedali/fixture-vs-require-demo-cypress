@@ -1,4 +1,4 @@
-import { Home } from "../pages/home";
+import { Home } from "../../pages/home";
 
 const users = require("../fixtures/users.json");
 describe("authentication tests saucedemo", () => {
