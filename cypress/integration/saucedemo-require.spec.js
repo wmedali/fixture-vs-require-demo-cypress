@@ -23,4 +23,21 @@ describe("authentication tests saucedemo", () => {
 
     Home.login(user.username, user.password);
   });
+
+  it(
+    "should open something for mobile ",
+    {
+      viewportHeight: 812,
+      viewportWidth: 375,
+      retries: {
+        runMode: 1,
+        openMode: 2,
+      },
+    },
+    () => {
+      const user = users[0];
+      Home.login(user.username, user.password);
+      cy.url().should("not.include", "/inventory.html");
+    }
+  );
 });
