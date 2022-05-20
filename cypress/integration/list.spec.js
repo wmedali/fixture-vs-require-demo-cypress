@@ -1,4 +1,4 @@
-it("try", () => {
+it.skip("try", () => {
   cy.visit("https://www.toutsurmoneau.fr/service-client");
   cy.get("#input-town").type("33000");
   cy.wait(1000);
