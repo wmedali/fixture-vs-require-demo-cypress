@@ -15,6 +15,5 @@ jobs:
       - name: Publish HTML report
         uses: actions/upload-artifact@v3
         with:
-          name: html-report
-          path: temp/html
-        if: failure()
+          name: cypress-screenshots
+          path: cypress/screenshots
