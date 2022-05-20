@@ -12,3 +12,8 @@ jobs:
         run: npm install
       - name: Run tests
         run: npx cypress run
+      - name: Publish HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: html-report
+          path: temp/html
