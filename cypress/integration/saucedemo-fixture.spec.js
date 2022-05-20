@@ -16,7 +16,7 @@ describe("authentication tests saucedemo", () => {
     const user = this.users[1];
 
     Home.login(user.username, user.password);
-    cy.url().should("include", "/inventory.html");
+    cy.url().should("not.include", "/inventory.html");
   });
 
   it("locked out user", function () {

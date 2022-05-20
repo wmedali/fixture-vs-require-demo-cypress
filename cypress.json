@@ -1,3 +1,15 @@
 {
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "video": false,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "cypress-mochawesome-reporter, mocha-junit-reporter",
+    "mochaJunitReporterReporterOptions": {
+      "mochaFile": "temp/junit/results-[hash].xml"
+    },
+    "cypressMochawesomeReporterReporterOptions": {
+      "charts": true,
+      "reportDir": "temp/html"
+    }
+  }
 }
